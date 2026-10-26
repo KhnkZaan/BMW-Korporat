@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BMW – Identitas Korporat</title>
+<style>
+:root{--bl:#1c69d4;--cy:#3cc3ff;--bk:#0b0b0c;--lt:#f1f2f4;--tx:#1b1b1d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Helvetica Neue",Arial,sans-serif;background:#000;color:#fff;margin:0;overflow:hidden;height:100vh;height:100dvh;position:fixed;inset:0;width:100%}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
+.lap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000}
+.scr{display:contents}
+.stage{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000;font-size:var(--fs,10px);color:#fff;user-select:none}
+.sl{position:absolute;inset:0;padding:6.2em 5em 4.6em 8.5em;opacity:0;visibility:hidden;transform:translateX(5%) scale(1.02);transition:opacity .7s,transform .8s cubic-bezier(.2,.7,.2,1),visibility 0s .8s;background:radial-gradient(55% 45% at 92% 0,rgba(28,105,212,.22),transparent 70%),radial-gradient(40% 40% at 0 100%,rgba(60,195,255,.07),transparent 70%),var(--bk)}
+.sl.on{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.sl.lt{background:var(--lt);color:var(--tx)}
+.sl .a{opacity:0}
+.sl.on .a{animation:ai .9s var(--d,0s) both cubic-bezier(.2,.7,.2,1)}
+.sl.on .a.l{animation-name:al}.sl.on .a.r{animation-name:ar}.sl.on .a.z{animation-name:az}
+@keyframes ai{from{opacity:0;transform:translateY(3em)}to{opacity:1;transform:none}}
+@keyframes al{from{opacity:0;transform:translateX(-6em)}to{opacity:1;transform:none}}
+@keyframes ar{from{opacity:0;transform:translateX(6em)}to{opacity:1;transform:none}}
+@keyframes az{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.hd{position:absolute;z-index:6;top:1.5em;left:1.2em;right:4.6em;display:flex;align-items:center;justify-content:space-between;pointer-events:none;transition:opacity .4s,color .4s}
+.hd svg{width:3.6em;height:3.6em;filter:drop-shadow(0 .15em .5em rgba(0,0,0,.45))}.hd span{font-size:1.15em;letter-spacing:.18em;font-weight:500;text-transform:uppercase;display:flex;align-items:center}.hd span b{font-weight:800;letter-spacing:.3em;margin-right:1em;padding-right:1em;border-right:1px solid currentColor;line-height:1.6}
+h2{font-size:2.7em;font-weight:300;line-height:1.12;margin-bottom:.45em}
+p{font-size:1.45em;line-height:1.55}
+.vt{position:absolute;left:0;top:0;bottom:0;width:2.3em;background:#fff;color:#000;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;justify-content:center;font-size:2.6em;letter-spacing:.45em;font-weight:700}
+.lt .vt{background:#000;color:#fff}
+.sl.on .vt{animation:vt 1s both cubic-bezier(.2,.7,.2,1)}
+@keyframes vt{from{transform:rotate(180deg) translateY(-100%)}to{transform:rotate(180deg)}}
+.stp{position:absolute;right:0;top:0;bottom:0;width:3em;background:repeating-linear-gradient(135deg,#fff 0 1.1em,transparent 1.1em 2.2em);opacity:.85;clip-path:inset(0 0 100% 0)}
+.lt .stp{background:repeating-linear-gradient(135deg,var(--bl) 0 1.1em,transparent 1.1em 2.2em)}
+.sl.on .stp{animation:sp 1.2s .3s forwards}
+@keyframes sp{to{clip-path:inset(0)}}
+.dg{display:grid;grid-template-columns:.95fr 1.05fr;gap:3em;max-height:100%;overflow:auto;padding-right:1.5em;scrollbar-width:thin;scrollbar-color:#555 transparent}
+.tg{display:inline-block;background:#111;color:#fff;border:1px solid #444;border-left:.7em solid var(--ac,#1c69d4);font-size:1.2em;padding:.3em 1em;border-radius:.3em;margin-bottom:1em;font-weight:600}
+.ld{font-size:1.4em}
+.bl{list-style:none;margin-top:1em}
+.bl li{font-size:1.28em;line-height:1.5;padding:.45em 0 .45em 1.5em;position:relative}
+.bl li::before{content:"";position:absolute;left:0;top:1em;width:.7em;height:.7em;background:var(--ac)}
+.R{display:grid;grid-template-columns:1fr 1fr;gap:1em;align-content:start}
+.cd{background:#15171b;border:1px solid #2a2d33;border-top:.3em solid var(--ac);border-radius:.6em;padding:1em 1.1em;transition:transform .35s}
+.cd:hover{transform:translateY(-.5em)}
+.lt .cd{background:#fff;border-color:#e0e2e6;border-top-color:var(--ac);box-shadow:0 .4em 1.2em rgba(0,0,0,.08)}
+.cd b{display:block;font-weight:600;font-size:1.4em;margin-bottom:.35em}
+.cd span{font-size:1.18em;line-height:1.5;display:block;color:#dde2ea}.lt .cd span{color:#262a31}.six .cd span{font-size:1.02em}.six .cd b{font-size:1.25em}
+.sts{display:grid;grid-template-columns:repeat(3,1fr);gap:.8em;margin-top:1.1em}
+.gl{background:#fff;color:#111;border-radius:.9em;padding:.8em 1em;box-shadow:0 .5em 1.6em rgba(0,0,0,.3)}
+.gl small{display:block;font-size:1.05em;color:#222;line-height:1.3}.gl strong{font-size:2.1em;font-weight:600;color:#0a8fd0;line-height:1.15;display:block}
+.pl{display:flex;flex-direction:column;gap:.7em}
+.pl button{display:flex;align-items:center;gap:1em;border:1px solid #2c3037;border-left:.6em solid var(--c);border-radius:.8em;padding:.5em 1.6em .5em .5em;color:#fff;font-size:1.25em;font-weight:600;text-align:left;cursor:pointer;background:#16181d;transition:transform .3s,background .3s}.pl button:hover{background:#20242b}
+.pl i{flex:none;width:2.4em;height:2.4em;border-radius:50%;background:var(--c);color:#111;display:grid;place-items:center;font-style:normal;font-weight:700}
+.pl h3{font-size:1.35em;font-weight:600;color:#fff;margin:0 0 .6em}
+.ex2{display:flex;gap:.6em;flex-wrap:wrap;margin-top:1.4em}
+.ex2 button{background:none;border:1px solid #aaa;color:#fff;border-radius:2em;padding:.4em 1.2em;font-size:1.2em;cursor:pointer;transition:.25s}
+.ex2 button:hover{background:#fff;color:#000}
+.lg{display:flex;justify-content:center}.lg svg{width:31em;max-width:100%;overflow:visible}
+.lg .q,.lg .rg{cursor:pointer;transition:transform .4s,filter .3s;transform-origin:100px 100px}
+.lg .q:hover,.lg .q.on{transform:scale(1.07);filter:brightness(1.12)}.lg .rg:hover,.lg .rg.on{filter:drop-shadow(0 0 5px #1c69d4)}
+.tb{display:flex;gap:.5em;flex-wrap:wrap;margin-bottom:.9em}
+.tb button{font-size:1.1em;padding:.4em 1em;border:1px solid #999;background:none;border-radius:2em;cursor:pointer;color:inherit;transition:.25s}
+.tb button.on,.tb button:hover{background:var(--bl);border-color:var(--bl);color:#fff}
+.inf{border-left:.3em solid var(--bl);padding-left:1.2em;min-height:15em;transition:opacity .2s}
+.inf h3{font-size:1.9em;font-weight:400;margin-bottom:.3em}.inf p{font-size:1.3em;margin-bottom:.6em}.inf em{font-style:normal;font-weight:600;color:var(--bl)}
+.rw{display:flex;flex-direction:column;gap:.75em}
+.rw div{display:flex;align-items:center;gap:1.1em;color:#111;background:#fff;border-left:.6em solid var(--c);border-radius:.6em;padding:.55em 1.4em .55em .6em;font-size:1.2em;box-shadow:0 .3em 1em rgba(0,0,0,.1)}
+.rw i{flex:none;width:2.8em;height:2.8em;border-radius:50%;background:var(--c);color:#111;display:grid;place-items:center;font-style:normal;font-size:1.1em;font-weight:700}
+.rw b{font-weight:700;width:6.5em;flex:none;font-size:1.05em}.rw span{font-size:.95em;line-height:1.35;color:#222}
+.sm{margin-top:1em;font-size:1.25em;padding:.8em 1.2em;border-left:.3em solid var(--bl);background:#fff}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6em 1em;margin-top:2.6em;position:relative}
+.tl div{position:relative;border-top:.25em solid #2e3238;padding-top:1.1em}
+.tl div::before{content:"";position:absolute;top:-.6em;left:0;width:.95em;height:.95em;border-radius:50%;background:var(--bl);box-shadow:0 0 0 .25em #000}
+.tl b{font-size:1.9em;font-weight:300;color:var(--cy);display:block;line-height:1.1}.tl strong{display:block;font-size:1.2em;font-weight:600;margin:.15em 0 .2em}.tl span{font-size:1.1em;line-height:1.45;color:#d3d9e2;display:block}
+.pal{display:flex;gap:.5em;height:15em;margin-top:1.2em}
+.pal div{flex:1;border-radius:.8em;padding:1em;display:flex;flex-direction:column;justify-content:flex-end;transition:flex .5s cubic-bezier(.2,.7,.2,1);overflow:hidden}
+.pal div:hover{flex:2.4}.pal b{font-size:1.5em;font-weight:600}.pal small{font-size:1.1em;line-height:1.4}
+.mst{display:flex;margin:1.1em 0 .5em;height:1.6em;transform:skewX(-20deg);width:20em}.mst i{flex:1}
+.bt{display:flex;gap:1em;margin-top:1.4em;flex-wrap:wrap}
+.bt a{padding:.8em 1.8em;font-size:1.15em;color:#fff;text-decoration:none;background:var(--bl);transition:.3s}.bt a.o{background:none;border:1px solid #fff}.bt a:hover{background:#fff;color:#000}
+.src li{font-size:1.12em;line-height:1.45;margin-bottom:.5em;color:#d3d9e2;list-style:none;padding-left:1em;position:relative}
+.src li::before{content:"";position:absolute;left:0;top:.6em;width:.4em;height:.4em;background:var(--cy)}
+.nv{position:absolute;z-index:8;right:1.6em;bottom:1.3em;display:flex;align-items:center;gap:.7em;font-size:1.1em}
+.nv button{width:2.6em;height:2.6em;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.6);color:#fff;font-size:1.1em;cursor:pointer;transition:.25s}
+.nv button:hover{background:var(--bl);border-color:var(--bl)}
+.dots{position:absolute;z-index:8;left:50%;bottom:1.6em;transform:translateX(-50%);display:flex;gap:.55em}
+.dots button{width:.8em;height:.8em;padding:0;border:0;border-radius:1em;background:rgba(150,150,150,.6);cursor:pointer;transition:.3s}.dots button.on{background:var(--bl);width:2.2em}
+#prog{position:absolute;z-index:9;top:0;left:0;height:.3em;background:var(--bl);transition:width .6s}
+#vid{--ac:#3cc3ff}
+.ill{margin-top:1.1em;background:rgba(255,255,255,.05);border:1px solid rgba(128,128,128,.28);border-radius:.8em;padding:.5em .8em}
+.lt .ill{background:#fff;border-color:#dfe2e7}
+.ill svg{display:block;width:100%;height:auto;max-height:10em;margin:0 auto}
+#lgs{width:23em}
+.ba{display:flex;align-items:center;justify-content:center;gap:1.1em;background:#fff;border:1px solid #dfe2e7;border-radius:.9em;padding:.8em 1.2em;box-shadow:0 .4em 1.2em rgba(0,0,0,.08)}
+.ba figure{display:flex;flex-direction:column;align-items:center;gap:.4em;width:9.5em}
+.ba svg{width:8em;height:8em}
+.ba figcaption{font-size:.98em;line-height:1.3;text-align:center;color:#262a31}.ba figcaption b{display:block;font-size:1.05em;color:#111}
+.ba .ar{font-size:2.4em;color:var(--bl);line-height:1}
+.bn{font-size:1.02em;line-height:1.4;color:#33373e;text-align:center;max-width:34em}
+.vf{position:relative;width:64em;aspect-ratio:16/9;margin:.2em auto 0;border-radius:.9em;overflow:hidden;background:#000;border:1px solid #2a2d33;box-shadow:0 1.2em 3em rgba(0,0,0,.6),0 0 0 .25em rgba(28,105,212,.35)}
+.vf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vf .ph{position:absolute;inset:0;display:grid;place-items:center;color:#8d96a5;font-size:1.3em;letter-spacing:.1em}
+#intro{display:grid;place-items:center;padding:0;background:#000}
+#intro .glow{position:absolute;width:76em;height:76em;margin-top:-7em;border-radius:50%;background:radial-gradient(closest-side,rgba(28,105,212,.6),rgba(28,105,212,.14) 55%,transparent 74%);opacity:0;transform:scale(.4)}
+#intro.go .glow{animation:gw 3.4s 1.4s both ease-out}
+@keyframes gw{0%{opacity:0;transform:scale(.4)}35%{opacity:1}100%{opacity:.5;transform:scale(1)}}
+#intro .ds{position:absolute;width:38em;height:38em;margin-top:-7em}
+#intro .ds circle{fill:#fff;opacity:0;transform-box:fill-box;transform-origin:center}
+#intro.go .ds{animation:rt 40s linear infinite}
+#intro.go .ds circle{animation:dt 1.6s var(--d) both}
+@keyframes dt{0%{opacity:0;transform:scale(0)}50%{opacity:1}100%{opacity:.8;transform:scale(1)}}
+@keyframes rt{to{transform:rotate(360deg)}}
+#intro .lw{position:relative;width:15em;height:15em;margin-top:-7em;transform:scale(0);filter:drop-shadow(0 0 2.2em rgba(28,105,212,.55))}
+#intro .lw svg{width:100%;height:100%;display:block}
+#intro.go .lw{animation:pop 1.3s .6s both cubic-bezier(.2,1.4,.3,1)}
+@keyframes pop{from{transform:scale(0) rotate(-180deg)}to{transform:none}}
+#intro .shine{position:absolute;inset:0;border-radius:50%;overflow:hidden;pointer-events:none}
+#intro .shine::after{content:"";position:absolute;top:-25%;bottom:-25%;left:-60%;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg)}
+#intro.go .shine::after{animation:shn 1.2s 2.05s ease-in-out both}
+@keyframes shn{to{left:130%}}
+#intro .sg{position:absolute;bottom:6.9em;font-size:1.9em;letter-spacing:.5em;padding-left:.5em;font-weight:200;text-align:center;opacity:0;white-space:nowrap}
+#intro .ln{position:absolute;bottom:11.2em;height:1px;width:22em;background:linear-gradient(90deg,transparent,#1c69d4,#3cc3ff,#1c69d4,transparent);transform:scaleX(0)}
+#intro .sb{position:absolute;bottom:7.4em;font-size:1.15em;letter-spacing:.38em;padding-left:.38em;text-transform:uppercase;opacity:0;color:#b9c3d3}
+#intro.go .sg{animation:ai 1s 1.9s both}
+#intro.go .ln{animation:lx 1.2s 2.2s both cubic-bezier(.2,.7,.2,1)}
+#intro.go .sb{animation:ai 1s 2.6s both}
+@keyframes lx{to{transform:scaleX(1)}}
+#intro .gate{position:absolute;z-index:5;inset:0;margin:auto;width:30em;height:16em;background:none;border:0;color:#fff;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1em;font-size:1.25em;letter-spacing:.38em;text-transform:uppercase;font-weight:300;text-align:center}
+#intro .gate .pr{position:relative;width:4.8em;height:4.8em;border:1px solid rgba(255,255,255,.75);border-radius:50%;display:grid;place-items:center;transition:background .3s,border-color .3s}
+#intro .gate .pr::before{content:"";position:absolute;inset:-.7em;border:1px solid rgba(60,195,255,.55);border-radius:50%;animation:gp 2s ease-out infinite}
+#intro .gate .pr svg{width:42%;height:42%;margin-left:8%}
+#intro .gate:hover .pr{background:var(--bl);border-color:var(--bl)}
+#intro .gate small{font-size:.6em;letter-spacing:.14em;text-transform:none;opacity:.55}
+@keyframes gp{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+#intro.started .gate{display:none}
+#snd{position:relative}#snd.off{opacity:.45}#snd.off::after{content:"";position:absolute;left:22%;right:22%;top:50%;height:1.5px;background:#fff;transform:rotate(-40deg)}
+/* gaya editorial ala situs BMW: sudut tegas, label kapital */
+.tg{background:none;border:0;border-left:.35em solid var(--ac,#1c69d4);border-radius:0;padding:.15em 0 .15em .9em;font-size:1.05em;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:inherit}
+.cd,.gl,.rw div,.ba,.ill,.sm,.pal div,.vf,.pl button,.inf{border-radius:.12em}
+.ex2 button,.tb button{border-radius:0;letter-spacing:.12em;text-transform:uppercase;font-size:1em}
+.tb button{font-size:.95em}
+h2{letter-spacing:-.01em}
+/* ===== tata letak potret (HP berdiri / jendela sempit) ===== */
+.stage{--hb:#0b0b0c}
+.por .stage{aspect-ratio:auto}
+.por .sl{padding:0}
+.por .sc{display:block;position:absolute;left:0;right:0;top:6.4em;bottom:0;overflow-y:auto;overflow-x:hidden;padding:.6em 2.6em 9em 5.6em;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.por .sc::-webkit-scrollbar{display:none}
+.por .vt{width:2.1em;font-size:1.9em;letter-spacing:.3em}
+.por .stp{width:1.6em}
+.por .hd{top:0;left:0;right:0;height:6.4em;padding:0 2.2em 0 1.4em;background:linear-gradient(var(--hb) 80%,transparent)}
+.por .hd span{font-size:.8em;letter-spacing:.1em;text-align:right}
+.por .hd span b{margin-right:.7em;padding-right:.7em;letter-spacing:.2em}
+.por .dots{display:none}
+.por .nv{font-size:1.5em;right:.9em;bottom:.8em}
+.por h2{font-size:2.15em}
+.por p{font-size:1.3em}
+.por .dg{grid-template-columns:1fr!important;gap:1.6em;max-height:none;overflow:visible;padding-right:0;height:auto!important;align-items:start!important}
+.por .R{grid-template-columns:1fr}
+.por .six .cd span{font-size:1.15em}.por .six .cd b{font-size:1.35em}
+.por .sts{gap:.6em}.por .gl strong{font-size:1.7em}.por .gl small{font-size:.95em}
+.por .tl{grid-template-columns:1fr 1fr;gap:1.8em 1em;margin-top:1.8em}.por .tl b{font-size:1.7em}
+.por .pal{flex-wrap:wrap;height:auto;gap:.6em}.por .pal div{flex:1 1 44%;min-height:11em}.por .pal div:hover{flex:1 1 44%}
+.por .mrow{flex-wrap:wrap;gap:1em!important}
+.por .rw b{width:5.2em}
+.por .ba{flex-wrap:wrap}
+.por .vf{width:100%}
+.por #vid .sc>div{margin-top:0!important}
+.por #lgs{width:21em}
+.por .inf{min-height:0}
+.por .lg{margin:0 auto}
+.por .ill svg{max-height:none}
+.por #intro .ds{width:36em;height:36em}
+.por #intro .sg{font-size:1.3em;letter-spacing:.3em;padding-left:.3em;bottom:19%;white-space:normal;width:90%}
+.por #intro .ln{bottom:16.5%;width:18em}
+.por #intro .sb{font-size:1em;letter-spacing:.24em;bottom:12.5%;text-align:center;width:90%}
+.por #intro .gate{width:34em}
+@media(prefers-reduced-motion:reduce){.sl,.sl *{animation-duration:.01s!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="rd" viewBox="0 0 200 200"><circle cx="100" cy="100" r="99" fill="#000"/><circle cx="100" cy="100" r="97" fill="none" stroke="#fff" stroke-width="1.5"/>
+<g fill="#fff" font-family="Helvetica,Arial,sans-serif" font-size="25" text-anchor="middle"><text x="100" y="25" transform="rotate(-28 100 100)">B</text><text x="100" y="25">M</text><text x="100" y="25" transform="rotate(28 100 100)">W</text></g>
+<path d="M100 100V32A68 68 0 0 0 32 100Z" fill="#1c69d4"/><path d="M100 100V32A68 68 0 0 1 168 100Z" fill="#fff"/><path d="M100 100H168A68 68 0 0 1 100 168Z" fill="#1c69d4"/><path d="M100 100V168A68 68 0 0 1 32 100Z" fill="#fff"/><path d="M100 32V168M32 100H168" stroke="#000" stroke-width="1.4"/></symbol>
+</defs></svg>
+
+
+
+<div class="lap" id="lap"><div class="scr"><div class="stage" id="st">
+<div id="prog"></div>
+<div class="hd" id="hd"><svg aria-hidden="true"><use href="#rd"/></svg><span id="hs"></span></div>
+
+<!-- 0 -->
+<section class="sl" id="intro" data-t="">
+  <div class="glow"></div>
+  <svg class="ds" viewBox="-100 -100 200 200" id="ds" aria-hidden="true"></svg>
+  <div class="lw"><svg viewBox="0 0 200 200" role="img" aria-label="Logo BMW"><use href="#rd"/></svg><i class="shine"></i></div>
+  <div class="sg">SHEER DRIVING PLEASURE</div>
+  <div class="ln"></div>
+  <div class="sb">Identitas Korporat &middot; BMW Group</div>
+  <button class="gate" id="gate" aria-label="Mulai presentasi dengan suara"><span class="pr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button>
+</section>
+
+<!-- 1 agenda -->
+<section class="sl" data-t="Komponen identitas" id="agenda">
+  <div class="vt">I D E N T I T A S</div><div class="stp"></div>
+  <div style="padding-right:1.5em">
+    <h2 class="a">Komponen Identitas Korporat BMW</h2>
+    <p class="a" style="--d:.1s;font-size:1.15em;margin-bottom:1.2em">Kerangka: Kotler &amp; Pfoertsch (2008); Rustan (2009). Pilih komponen untuk langsung membukanya.</p>
+    <div class="dg" style="grid-template-columns:1fr 1fr;overflow:visible"><div class="pl" id="ag1"></div><div class="pl" id="ag2"></div></div>
+    <div class="ex2 a" style="--d:.8s" id="ag3"></div>
+  </div>
+</section>
+
+<section class="sl" data-det="nama"></section>
+<section class="sl" data-det="bidang"></section>
+
+<!-- 4 logo -->
+<section class="sl lt" data-t="Logo perusahaan" style="--ac:#5b9bd5">
+  <div class="vt">L O G O</div><div class="stp"></div>
+  <div class="dg" style="grid-template-columns:.8fr 1.2fr;align-items:center;height:100%">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:1.2em">
+    <div class="lg a z">
+      <svg viewBox="0 0 200 200" id="lgs" role="img" aria-label="Logo BMW interaktif">
+        <circle class="rg" data-k="ring" cx="100" cy="100" r="99" fill="#000"/>
+        <circle cx="100" cy="100" r="97" fill="none" stroke="#fff" stroke-width="1.5" style="pointer-events:none"/>
+        <g class="rg" data-k="letters" fill="#fff" font-family="Helvetica,Arial,sans-serif" font-size="25" text-anchor="middle"><text x="100" y="25" transform="rotate(-28 100 100)">B</text><text x="100" y="25">M</text><text x="100" y="25" transform="rotate(28 100 100)">W</text></g>
+        <path class="q" data-k="blue" d="M100 100V32A68 68 0 0 0 32 100Z" fill="#1c69d4"/><path class="q" data-k="white" d="M100 100V32A68 68 0 0 1 168 100Z" fill="#fff"/>
+        <path class="q" data-k="blue" d="M100 100H168A68 68 0 0 1 100 168Z" fill="#1c69d4"/><path class="q" data-k="white" d="M100 100V168A68 68 0 0 1 32 100Z" fill="#fff"/>
+        <path class="rg" data-k="cross" d="M100 32V168M32 100H168" stroke="#000" stroke-width="2.6" fill="none"/>
+      </svg>
+    </div>
+    <div class="ba a" style="--d:.6s">
+      <figure><svg viewBox="0 0 200 200" role="img" aria-label="Logo Rapp Motorenwerke (ilustrasi)">
+        <defs><clipPath id="rc"><circle cx="100" cy="100" r="64"/></clipPath><path id="rarc" d="M27 100A73 73 0 0 1 173 100"/></defs>
+        <circle cx="100" cy="100" r="99" fill="#000"/><circle cx="100" cy="100" r="97" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <text font-family="Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#fff" letter-spacing="1.5" text-anchor="middle"><textPath href="#rarc" startOffset="50%">RAPP MOTORENWERKE</textPath></text>
+        <circle cx="100" cy="100" r="66" fill="#fff"/>
+        <g clip-path="url(#rc)"><path d="M108 44L119 62C134 70 143 92 147 120L150 160L106 160C106 146 104 138 98 132C90 138 78 140 70 134C60 132 58 123 63 117C71 99 78 80 92 66C97 60 102 54 108 44Z" fill="#111"/><circle cx="90" cy="88" r="2.6" fill="#fff"/><circle cx="66" cy="124" r="2" fill="#fff"/></g>
+        <circle cx="15" cy="100" r="3" fill="#fff"/><circle cx="185" cy="100" r="3" fill="#fff"/>
+      </svg><figcaption><b>Sebelum</b>Rapp Motorenwerke, 1913</figcaption></figure>
+      <span class="ar" aria-hidden="true">&rarr;</span>
+      <figure><svg viewBox="0 0 200 200" role="img" aria-label="Logo BMW"><use href="#rd"/></svg><figcaption><b>Sesudah</b>BMW, 1917</figcaption></figure>
+    </div>
+    <p class="bn a" style="--d:.8s">BMW mewarisi bentuk cincin hitam dari logo Rapp. Kuda hitam di tengah diganti biru-putih khas Bavaria. <i>(Rapp: ilustrasi sederhana)</i></p>
+    </div>
+    <div class="a" style="--d:.3s">
+      <span class="tg">Komponen 1</span>
+      <h2>Makna Logo: Garis &amp; Warna</h2>
+      <div class="tb" id="tb"><button data-k="ring" class="on">Cincin hitam</button><button data-k="letters">Huruf BMW</button><button data-k="cross">Garis silang</button><button data-k="blue">Biru</button><button data-k="white">Putih</button></div>
+      <div class="inf" id="inf"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 kaitan -->
+<section class="sl lt" data-t="Kaitan dengan bidang" style="--ac:#1c69d4">
+  <div class="stp"></div>
+  <div style="padding:0 2em 0 0;margin-left:-3.5em">
+    <h2 class="a">Kaitan Logo dengan Bidang Otomotif Premium</h2>
+    <div class="rw">
+      <div class="a l" style="--d:.2s;--c:#5b9bd5"><i>◯</i><b>Lingkaran</b><span>Roda dan putaran mesin. Bentuk tanpa ujung juga berarti kesatuan dan gerak yang tak berhenti, inti dari kendaraan.</span></div>
+      <div class="a l" style="--d:.32s;--c:#ed7d31"><i>✛</i><b>Garis silang</b><span>Empat bidang sama besar mewakili presisi rekayasa dan keseimbangan, dua hal yang dijanjikan BMW pada cara mobil dan motornya berkendara.</span></div>
+      <div class="a l" style="--d:.44s;--c:#1c69d4"><i>◆</i><b>Biru</b><span>Langit dan teknologi: dari asal BMW sebagai pembuat mesin pesawat sampai kendaraan listrik BMW i dan Neue Klasse.</span></div>
+      <div class="a l" style="--d:.56s;--c:#8a8f98"><i>◇</i><b>Putih</b><span>Kemurnian dan kesempurnaan, selaras dengan desain bersih serta kualitas pengerjaan yang dijaga ketat.</span></div>
+      <div class="a l" style="--d:.68s;--c:#111"><i>●</i><b>Hitam</b><span>Kekuatan, elegan, eksklusif: bahasa visual pasar premium tempat BMW bersaing.</span></div>
+    </div>
+    <p class="sm a" style="--d:.85s;opacity:1">Pesan keseluruhan: kendaraan premium yang presisi dan berteknologi, berakar pada Bavaria.</p>
+  </div>
+</section>
+
+<section class="sl" data-det="slogan"></section>
+
+<!-- 7 kisah -->
+<section class="sl" data-t="Kisah merek" style="--ac:#a5a5a5">
+  <div class="vt">K I S A H</div><div class="stp"></div>
+  <div style="padding-right:1.5em">
+    <span class="tg a">Komponen 1</span>
+    <h2 class="a" style="--d:.1s">Kisah Merek: dari Mesin Pesawat ke Pasar Premium Dunia</h2>
+    <div class="tl">
+      <div class="a" style="--d:.3s"><b>1917</b><strong>Nama dan logo lahir</strong><span>Rapp Motorenwerke (1913) berganti menjadi Bayerische Motoren Werke. Roundel didaftarkan 5 Oktober 1917.</span></div>
+      <div class="a" style="--d:.45s"><b>1923</b><strong>Motor pertama</strong><span>BMW R 32 meluncur dan membawa roundel. Motorrad menjadi pilar kedua BMW.</span></div>
+      <div class="a" style="--d:.6s"><b>1929</b><strong>Era mobil</strong><span>Setelah mengambil alih pabrik Eisenach, BMW mulai memproduksi mobil berlabel BMW.</span></div>
+      <div class="a" style="--d:.75s"><b>1965</b><strong>Janji merek</strong><span>“Freude am Fahren” resmi menjadi slogan, menegaskan citra mobil yang sporty.</span></div>
+      <div class="a" style="--d:.9s"><b>1972</b><strong>BMW M &amp; menara</strong><span>BMW M berdiri untuk performa tinggi, dan menara “Four-Cylinder” selesai dibangun di Munich.</span></div>
+      <div class="a" style="--d:1.05s"><b>1976</b><strong>Hadir di Indonesia</strong><span>BMW 520i dirakit lokal. Perakitan beralih ke Astra pada 1993 dan PT BMW Indonesia berdiri April 2001.</span></div>
+      <div class="a" style="--d:1.2s"><b>2013</b><strong>Era listrik</strong><span>BMW i3 dihadirkan sebagai mobil listrik pertama sub-merek BMW i.</span></div>
+      <div class="a" style="--d:1.35s"><b>2025</b><strong>Neue Klasse</strong><span>BMW Group mengirim 442.072 mobil listrik penuh, dan generasi Neue Klasse mulai tampil di iX3 serta i3.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sl" data-det="gedung"></section>
+<section class="sl" data-det="seragam"></section>
+<section class="sl" data-det="profil"></section>
+
+<!-- 11 palet -->
+<section class="sl lt" data-t="Warna / palet warna" style="--ac:#ffc000">
+  <div class="vt">W A R N A</div><div class="stp"></div>
+  <div style="padding-right:1.5em">
+    <span class="tg a">Lanjutan komponen</span>
+    <h2 class="a" style="--d:.1s">Warna / Palet Warna BMW</h2>
+    <p class="a" style="--d:.2s;font-size:1.25em;max-width:62em">Palet BMW sengaja ringkas: biru dan putih dari Bavaria, ditambah hitam sebagai penegas premium. Warna yang sama muncul di logo, kendaraan, situs, dan ruang diler, sehingga mudah dikenali. Kode heks di bawah adalah pendekatan untuk layar.</p>
+    <div class="pal a" style="--d:.4s">
+      <div style="background:#1c69d4;color:#fff"><b>Biru BMW</b><small>#1C69D4. Teknologi, inovasi, kepercayaan; warna negara bagian Bavaria.</small></div>
+      <div style="background:#fff;color:#111;border:1px solid #ddd"><b>Putih</b><small>#FFFFFF. Kemurnian, kebersihan, kesempurnaan; pasangan biru pada roundel.</small></div>
+      <div style="background:#000;color:#fff"><b>Hitam</b><small>#000000. Kekuatan, elegan, eksklusif; cincin luar logo.</small></div>
+      <div style="background:#e8eaee;color:#111"><b>Abu-abu</b><small>Warna pendukung untuk teks dan latar situs maupun materi cetak.</small></div>
+    </div>
+    <div class="a mrow" style="--d:.6s;display:flex;align-items:center;gap:2em;margin-top:.8em">
+      <div class="mst"><i style="background:#81c4ff"></i><i style="background:#0066b1"></i><i style="background:#e22718"></i></div>
+      <p style="font-size:1.15em;max-width:44em"><b>Tiga garis BMW M</b> (biru muda, biru tua, merah) menjadi penanda khusus model performa tinggi dan motorsport.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sl" data-det="lain"></section>
+
+<!-- 14 video -->
+<section class="sl" data-t="Video BMW" id="vid">
+  <div class="vt">V I D E O</div><div class="stp"></div>
+  <div style="padding-right:1.5em;margin-top:-1.6em">
+    <h2 class="a" style="font-size:2.3em;margin-bottom:.35em;text-align:center">BMW dalam Gerak</h2>
+    <div class="vf a z" style="--d:.2s"><div class="ph">MEMUAT VIDEO…</div><iframe data-src="https://drive.google.com/file/d/1deJBUWO2pn_QQ77uSgj9n5mnNXjj-UWe/preview" title="Video BMW" allow="autoplay; fullscreen; encrypted-media" allowfullscreen></iframe></div>
+  </div>
+</section>
+
+<!-- 15 closing -->
+<section class="sl" data-t="Kesimpulan &amp; sumber" style="--ac:#1c69d4">
+  <div class="vt">B M W</div><div class="stp"></div>
+  <div class="dg" style="grid-template-columns:1.1fr .9fr">
+    <div>
+      <h2 class="a">Kesimpulan</h2>
+      <ul class="bl a" style="--d:.2s;margin-top:0">
+        <li>Nama BMW (Bayerische Motoren Werke) menyatakan asal daerah dan keahlian mesin perusahaan.</li>
+        <li>Logo roundel menggabungkan cincin hitam, garis silang, serta biru dan putih Bavaria. Maknanya: kesatuan, presisi, teknologi, kemurnian, dan kemewahan, selaras dengan otomotif premium.</li>
+        <li>Slogan “Sheer Driving Pleasure” menjadikan pengalaman mengemudi sebagai janji merek.</li>
+        <li>Gedung, seragam, company profile, warna, desain ikonik, suara, dan layanan digital dijaga seragam sehingga BMW konsisten dikenali di seluruh dunia.</li>
+      </ul>
+      <p class="a" style="--d:.5s;margin-top:1.6em;font-size:1.7em;font-weight:300;letter-spacing:.06em;color:var(--cy)">Terima kasih &middot; Sheer Driving Pleasure</p>
+    </div>
+    <div class="a r" style="--d:.3s">
+      <h2 style="font-size:1.8em">Sumber</h2>
+      <ul class="src">
+        <li>Kotler &amp; Pfoertsch (2008) dan Rustan (2009): kerangka komponen identitas korporat, sesuai materi kuliah.</li>
+        <li>BMW Group PressClub (press.bmwgroup.com): data penjualan 2025, profil BMW Group, sejarah Four-Cylinder dan Museum, serta sejarah slogan.</li>
+        <li>BMW Group Classic: sejarah slogan “Freude am Fahren”.</li>
+        <li>BMW Indonesia (bmw.co.id): layanan dan aplikasi.</li>
+        <li>Wikipedia: BMW Headquarters dan BMW Welt. BMWBlog dan The Drive: sejarah logo.</li>
+      </ul>
+      
+    </div>
+  </div>
+</section>
+
+<div class="dots" id="dots"></div>
+<div class="nv"><span id="ct"></span><button id="pv" aria-label="Slide sebelumnya">‹</button><button id="nx" aria-label="Slide berikutnya">›</button><button id="snd" aria-label="Suara aktif/nonaktif">&#9834;</button><button id="fsb" aria-label="Layar penuh">⤢</button></div>
+</div></div></div>
+
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// ---- detail slides (data-driven)
+const DET={
+nama:{ac:'#70ad47',th:'dk',vt:'N A M A',t:'Nama perusahaan',tag:'Komponen 1',h:'Nama Perusahaan / Brand',
+lead:'BMW adalah singkatan dari <b>Bayerische Motoren Werke</b>, dalam bahasa Indonesia “Pabrik Mesin Bavaria”. BMW menandai 1916 sebagai tahun berdirinya, dan nama ini tercatat pada 1917 ketika pembuat mesin pesawat Rapp Motorenwerke (berdiri 1913 di Munich) berganti nama. Kini BMW AG berkantor pusat di Munich, Bavaria, Jerman, dan menjadi induk empat merek: BMW, MINI, Rolls-Royce, dan BMW Motorrad.',
+bl:['Lafal: “beh-em-veh” dalam bahasa Jerman.','Tiga huruf yang singkat, mudah diingat, dan dipakai konsisten di logo, kendaraan, dan komunikasi.','Pembeda utama dari pesaing: nama yang menyebut daerah asal dan keahlian mesin.'],
+cd:[['Bayerische','Berarti “dari Bavaria”, negara bagian di Jerman selatan. Asal daerah ini terus hadir lewat warna biru dan putih pada logo.'],['Motoren','Berarti “mesin”. Perusahaan lahir dari pembuatan mesin pesawat terbang, lalu berkembang ke sepeda motor dan mobil.'],['Werke','Berarti “pabrik”. Kata ini menekankan rekayasa dan produksi sendiri, citra manufaktur yang rapi dan andal.'],['Fungsi nama brand','Nama menjadi pengenal utama yang membedakan perusahaan dari pesaing dan menyimpan reputasi. BMW kini identik dengan kendaraan premium dan kenikmatan berkendara.']]},
+bidang:{ac:'#1c69d4',th:'lt',vt:'B I D A N G',t:'Bidang usaha',tag:'Profil usaha',h:'Bidang Perusahaan',
+lead:'BMW Group bergerak di industri <b>otomotif premium</b>: mobil, sepeda motor, dan layanan keuangan. Jaringan produksinya mencakup lebih dari 30 lokasi di dunia dengan penjualan di lebih dari 140 negara. Lini produknya meliputi mesin bensin, plug-in hybrid, dan kendaraan listrik penuh.',
+st:[[2463715,'','Kendaraan BMW Group terkirim, 2025'],[642087,'','Kendaraan elektrifikasi (BEV dan PHEV)'],[442072,'','Mobil listrik penuh terkirim']],
+cd:[['BMW (2.169.761 unit)','Merek utama: sedan, SUV, coupé, serta BMW i (listrik) dan BMW M (performa tinggi). BMW M mencatat rekor 213.457 unit pada 2025.'],['MINI (288.290 unit)','Merek kompak premium asal Inggris. Lebih dari sepertiga MINI yang dikirim pada 2025 bertenaga listrik penuh.'],['Rolls-Royce (5.664 unit)','Merek ultra-mewah yang dibuat terbatas dengan pengerjaan tangan, di puncak piramida BMW Group.'],['BMW Motorrad (202.563 unit)','Sepeda motor dan skuter premium sejak R 32 tahun 1923. BMW Group juga menyediakan layanan keuangan premium.']]},
+slogan:{ac:'#ffc000',th:'dk',vt:'S L O G A N',t:'Slogan / tagline',tag:'Komponen 1',h:'Slogan / Tagline / Motto',
+lead:'Slogan global BMW adalah <b>“Freude am Fahren”</b>, dalam bahasa Inggris <b>“Sheer Driving Pleasure”</b>: kenikmatan murni berkendara. Slogan ini menegaskan bahwa yang dijual BMW adalah pengalaman mengemudi, bukan sekadar alat transportasi.',
+bl:['1965: “Aus Freude am Fahren” ditetapkan resmi oleh BMW, dirumuskan agensi Gramm &amp; Grey (Düsseldorf).','1972: versi Inggris “Sheer Driving Pleasure” dibakukan. 1973: untuk motor, “Sheer Riding Pleasure”.','1975: pasar Amerika Serikat memakai “The Ultimate Driving Machine”.'],
+cd:[['Makna','Kegembiraan mengemudi: respons mobil, kendali, dan emosi di balik kemudi menjadi alasan membeli BMW.'],['Fungsi bagi identitas','Menjadi motto yang merangkum nilai perusahaan dan membedakan BMW dari merek premium lain yang menonjolkan kenyamanan atau status.'],['Penerapan','Hadir di iklan, situs, ruang diler, dan komunikasi produk. Di beberapa pasar tampil juga sebagai kampanye “Joy is BMW”.'],['Tetap relevan','BMW mempertahankan slogan ini di era listrik, dengan alasan kenikmatan berkendara tidak pernah bergantung pada mesin pembakaran.']]},
+gedung:{ac:'#5b9bd5',th:'lt',vt:'G E D U N G',ill:'gedung',t:'Eksterior / interior gedung',tag:'Lanjutan komponen',h:'Eksterior / Interior Gedung',
+lead:'Bangunan menjadi identitas yang bisa dilihat dan dikunjungi. Di Munich, BMW membangun satu kompleks yang menceritakan dirinya sendiri: menara berbentuk silinder mesin, museum, dan pusat pengalaman. Di Indonesia, diler memakai konsep ruang pamer yang seragam.',
+bl:['Eksterior: bentuk bangunan meniru komponen mesin.','Interior: ruang pamer dan kokpit mobil berorientasi pada pengemudi.','Seluruh kompleks Munich bisa dikunjungi publik.'],
+cd:[['BMW Tower “Four-Cylinder”','Dirancang Karl Schwanzer, selesai 1972 dan dibuka 1973. Tinggi sekitar 100 meter, 22 lantai, empat silinder yang tersusun seperti mesin. Berstatus bangunan cagar budaya sejak 1999.'],['BMW Museum','Berbentuk mangkuk, berdiri di samping menara dan juga karya Schwanzer. Dalam “mesin” ini, museum melambangkan kepala silinder.'],['BMW Welt','Dibuka 17 Oktober 2007, karya Coop Himmelb(l)au dengan atap kerucut ganda dari kaca dan baja. Berfungsi sebagai pusat pengalaman dan serah terima kendaraan; masuk gratis.'],['Diler &amp; interior mobil','Diler BMW di Indonesia, misalnya BMW Astra, memakai konsep ruang pamer Retail.Next. Di dalam mobil, kokpit berorientasi pengemudi dengan sistem iDrive menjadi “interior” identitas BMW.']]},
+seragam:{ac:'#ed7d31',th:'dk',vt:'S E R A G A M',ill:'seragam',t:'Seragam',tag:'Lanjutan komponen',h:'Seragam',
+lead:'Seragam membuat orang BMW terlihat dan terasa sebagai satu merek. Penampilan staf yang rapi, memakai roundel dan warna korporat, memperkuat kepercayaan pelanggan setiap kali mereka bertemu langsung dengan perusahaan.',
+bl:['Fungsi: menyeragamkan citra, menandai peran, dan membangun rasa percaya.','Unsur yang berulang: roundel, palet biru-putih-hitam, potongan yang rapi.','Rincian berbeda antar diler dan negara.'],
+cd:[['Staf penjualan &amp; layanan','Tenaga penjual dan penerima tamu di diler tampil berpakaian profesional dengan atribut BMW yang seragam.'],['Teknisi bengkel','Teknisi BMW Service memakai pakaian kerja fungsional berlogo, menandai keahlian dan standar layanan yang sama.'],['Tim motorsport &amp; BMW M','Pakaian tim balap memakai tiga garis BMW M (biru muda, biru tua, merah), identitas visual khas performa tinggi.'],['Perlengkapan berkendara','BMW Motorrad menyediakan perlengkapan berkendara (rider equipment) bermerek untuk pengendara motor dan penggemar.']]},
+profil:{ac:'#a5a5a5',th:'lt',vt:'P R O F I L',t:'Company profile',tag:'Lanjutan komponen',h:'Company Profile',
+lead:'<b>BMW Group</b> adalah produsen mobil dan sepeda motor premium terkemuka dunia, dengan empat merek (BMW, MINI, Rolls-Royce, BMW Motorrad) serta layanan keuangan premium. Profil perusahaan disampaikan lewat BMW Group Report, situs bmwgroup.com, PressClub, dan situs lokal seperti bmw.co.id.',
+st:[[159104,'','Karyawan (31 Des 2024)'],['€142,4 M','','Pendapatan 2024'],['€11,0 M','','Laba sebelum pajak 2024']],
+cd:[['Strategi','Pendekatan netral teknologi dengan strategi multi-merek premium: bensin, plug-in hybrid, dan listrik penuh ditawarkan bersama.'],['Neue Klasse','Generasi baru kendaraan listrik yang menandai arah BMW ke depan. BMW berencana meluncurkan lebih dari 40 model baru dan penyegaran hingga 2027.'],['Keberlanjutan','Keberlanjutan menjadi bagian kunci strategi perusahaan, mencakup rantai pasok, produksi, sampai akhir masa pakai produk.'],['BMW di Indonesia','Hadir sejak 1976 lewat perakitan 520i; perakitan dipegang Astra (PT Gaya Motor) sejak 1993 dan PT BMW Indonesia berdiri April 2001. Produk lokal antara lain Seri 3, Seri 5, X1, dan X3.']]},
+lain:{ac:'#4472c4',th:'dk',vt:'D A N  L A I N N Y A',t:'Dan sebagainya',tag:'Lanjutan komponen',h:'Dan Sebagainya: Elemen Identitas Lain',
+lead:'Identitas korporat BMW tidak berhenti pada logo. Banyak elemen lain yang bisa dilihat, didengar, dan dipakai ikut membentuk kesan “ini BMW” hanya dalam sekejap.',
+cd:[['Desain ikonik','Grill ginjal (kidney grille) di bagian depan, serta lekukan Hofmeister kink pada tiang belakang, membuat siluet BMW mudah dikenali dari kejauhan.'],['Identitas suara','BMW IconicSounds Electric, dikembangkan bersama komposer Hans Zimmer, memberi mobil listrik suara khas BMW.'],['Digital','Sistem iDrive, ConnectedDrive, aplikasi MY BMW, dan BMW Digital Key menyatukan pengalaman merek di dalam dan luar mobil.'],['Situs &amp; media','Situs bmw.co.id, PressClub, dan media sosial menjaga bahasa visual dan nada komunikasi yang seragam.'],['Layanan &amp; komunitas','BMW Service, BMW Financial Services, serta komunitas seperti BMW Excellence Club menjaga hubungan jangka panjang dengan pelanggan.'],['Aksesori &amp; gaya hidup','BMW Accessories dan BMW Lifestyle membawa roundel dan palet warna ke barang sehari-hari, brosur, dan cenderamata.']]}
+};
+
+const ILL={
+gedung:`<svg viewBox="0 0 440 130" role="img" aria-label="Ilustrasi BMW Tower, BMW Museum, dan BMW Welt">
+<defs><linearGradient id="tw" x1="0" x2="1"><stop offset="0" stop-color="#e3e9f0"/><stop offset=".5" stop-color="#9fb0c4"/><stop offset="1" stop-color="#6f8097"/></linearGradient>
+<pattern id="wn" width="30" height="6" patternUnits="userSpaceOnUse"><rect width="30" height="1.4" y="4.2" fill="#3f4c5e" opacity=".45"/></pattern></defs>
+<line x1="8" y1="104" x2="432" y2="104" stroke="#444" stroke-width="1.2"/>
+<g><rect x="42" y="22" width="26" height="82" rx="13" fill="url(#tw)"/><rect x="70" y="22" width="26" height="82" rx="13" fill="url(#tw)"/><rect x="98" y="22" width="26" height="82" rx="13" fill="url(#tw)"/><rect x="126" y="22" width="26" height="82" rx="13" fill="url(#tw)"/>
+<rect x="42" y="22" width="110" height="82" fill="url(#wn)" opacity=".8"/><rect x="38" y="96" width="118" height="8" rx="2" fill="#56657a"/>
+<use href="#rd" x="86" y="1" width="22" height="22"/></g>
+<g><path d="M178 84H250Q246 104 214 104Q182 104 178 84Z" fill="#f4f6f8" stroke="#8795a8" stroke-width="1.4"/><ellipse cx="214" cy="84" rx="36" ry="5" fill="#dfe5ec" stroke="#8795a8" stroke-width="1.2"/></g>
+<g><path d="M276 96Q350 74 424 96V104H276Z" fill="#8a99ad"/><path d="M322 82L350 30L378 82Z" fill="#d6dee8" stroke="#8795a8" stroke-width="1.2"/><path d="M336 82L350 52L364 82Z" fill="#9fb0c4" opacity=".8"/><path d="M276 96Q350 70 424 96Q350 90 276 96Z" fill="#6f8097"/></g>
+<g font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="600" fill="#1b1b1d" text-anchor="middle"><text x="97" y="120">BMW Tower</text><text x="214" y="120">Museum</text><text x="350" y="120">BMW Welt</text></g>
+<text x="436" y="128" font-size="6.5" text-anchor="end" fill="#777" font-family="Helvetica,Arial,sans-serif">Ilustrasi sederhana</text></svg>`,
+seragam:`<svg viewBox="0 0 440 130" role="img" aria-label="Ilustrasi seragam staf, teknisi, tim BMW M, dan pengendara">
+<defs><g id="hd0"><rect x="-4" y="22" width="8" height="9" fill="#aeb7c3"/><circle cx="0" cy="13" r="11" fill="#cdd4de"/></g></defs>
+<g transform="translate(58 4)"><use href="#hd0"/><path d="M-31 100V56Q-31 35 -12 31L-6 28L0 40L6 28L12 31Q31 35 31 56V100Z" fill="#1d2f52"/><path d="M-7 29L0 58L7 29L0 40Z" fill="#f1f2f4"/><path d="M0 40L-3 52L0 58L3 52Z" fill="#1c69d4"/><use href="#rd" x="12" y="52" width="11" height="11"/></g>
+<g transform="translate(168 4)"><use href="#hd0"/><path d="M-31 100V56Q-31 35 -12 31L-6 28L0 36L6 28L12 31Q31 35 31 56V100Z" fill="#46536a"/><path d="M-31 74H31V79H-31Z" fill="#dbe3ec"/><path d="M-31 86H31V90H-31Z" fill="#dbe3ec" opacity=".7"/><path d="M-6 28L0 36L6 28L10 31L0 44L-10 31Z" fill="#2f3a4d"/><use href="#rd" x="-24" y="46" width="13" height="13"/></g>
+<g transform="translate(278 4)"><use href="#hd0"/><path d="M-31 100V56Q-31 35 -12 31L-6 28L0 36L6 28L12 31Q31 35 31 56V100Z" fill="#f2f4f7"/><path d="M-6 28L0 36L6 28L9 30L0 40L-9 30Z" fill="#111"/><g transform="skewY(-8)"><rect x="-31" y="62" width="62" height="5" fill="#81c4ff"/><rect x="-31" y="68" width="62" height="5" fill="#0066b1"/><rect x="-31" y="74" width="62" height="5" fill="#e22718"/></g><use href="#rd" x="-24" y="46" width="12" height="12"/></g>
+<g transform="translate(388 4)"><rect x="-4" y="23" width="8" height="8" fill="#2a2d33"/><circle cx="0" cy="12" r="13" fill="#17181b"/><path d="M-11 8Q0 3 11 8L10 15Q0 18 -10 15Z" fill="#81c4ff"/><path d="M-31 100V56Q-31 35 -12 31L12 31Q31 35 31 56V100Z" fill="#17181b"/><path d="M-31 56Q-31 35 -12 31L-8 31L-8 48Q-20 52 -31 60Z" fill="#1c69d4"/><path d="M31 56Q31 35 12 31L8 31L8 48Q20 52 31 60Z" fill="#1c69d4"/><rect x="-31" y="80" width="62" height="3" fill="#dbe3ec"/><use href="#rd" x="-6" y="52" width="12" height="12"/></g>
+<g font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="600" fill="#e8ecf2" text-anchor="middle"><text x="58" y="120">Staf diler</text><text x="168" y="120">Teknisi</text><text x="278" y="120">Tim BMW M</text><text x="388" y="120">Rider Motorrad</text></g>
+<text x="436" y="128" font-size="6.5" text-anchor="end" fill="#9aa3b2" font-family="Helvetica,Arial,sans-serif">Ilustrasi sederhana</text></svg>`};
+$$('[data-det]').forEach(s=>{const d=DET[s.dataset.det];s.dataset.t=d.t;s.style.setProperty('--ac',d.ac);if(d.th==='lt')s.classList.add('lt');
+const two=!!d.bl||!!d.st||s.dataset.det==='nama';
+let L='<span class="tg a">'+d.tag+'</span><h2 class="a" style="--d:.1s">'+d.h+'</h2><p class="ld a" style="--d:.2s">'+d.lead+'</p>';
+if(d.st)L+='<div class="sts">'+d.st.map((x,i)=>'<div class="gl a z" style="--d:'+(.4+i*.15)+'s"><small>'+x[2]+'</small><strong'+(typeof x[0]==='number'?' data-n="'+x[0]+'"':'')+'>'+(typeof x[0]==='number'?0:x[0])+'</strong></div>').join('')+'</div>';
+if(d.bl)L+='<ul class="bl a" style="--d:.4s">'+d.bl.map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+if(d.ill)L+='<div class="ill a" style="--d:.6s">'+ILL[d.ill]+'</div>';
+const sixCards=d.cd.length>4;
+const R='<div class="R'+(sixCards?' six':'')+'">'+d.cd.map((c,i)=>'<div class="cd a z" style="--d:'+(.3+i*.12)+'s"><b>'+c[0]+'</b><span>'+c[1]+'</span></div>').join('')+'</div>';
+s.innerHTML='<div class="vt">'+d.vt+'</div><div class="stp"></div><div class="dg"><div>'+L+'</div>'+R+'</div>'});
+// ---- agenda
+const AG1=[['Nama perusahaan / brand','#70ad47','◉',2],['Logo perusahaan','#5b9bd5','◐',4],['Slogan / tagline / motto','#ffc000','❝',6],['Kisah merek','#a5a5a5','✎',7]];
+const AG2=[['Eksterior / interior gedung','#5b9bd5','▦',8],['Seragam','#ed7d31','♟',9],['Company profile','#a5a5a5','▤',10],['Warna / palet warna','#ffc000','◧',11],['Dan sebagainya','#4472c4','＋',12]];
+const mk=(a,h)=>'<h3 class="a">'+h+'</h3>'+a.map((x,i)=>'<button class="a l" style="--c:'+x[1]+';--d:'+(.2+i*.1)+'s" data-g="'+x[3]+'"><i>'+x[2]+'</i>'+x[0]+'</button>').join('');
+$('#ag1').innerHTML=mk(AG1,'Komponen');$('#ag2').innerHTML=mk(AG2,'Lanjutan komponen');
+$('#ag3').innerHTML=[['Bidang usaha',3],['Kaitan logo &amp; bidang',5],['Video BMW',13],['Kesimpulan &amp; sumber',14]].map(x=>'<button data-g="'+x[1]+'">'+x[0]+'</button>').join('');
+$$('.sl:not(#intro)').forEach(s=>{const w=document.createElement('div');w.className='sc';[...s.children].forEach(c=>{if(!c.classList.contains('vt')&&!c.classList.contains('stp'))w.appendChild(c)});s.appendChild(w)});
+const scs=document.createElement('style');scs.textContent='.sc{display:contents}';document.head.insertBefore(scs,document.head.firstChild);
+// ---- engine
+const st=$('#st'),sl=$$('.sl'),dots=$('#dots');let cur=-1,auto=true;
+sl.forEach((s,i)=>{const d=document.createElement('button');d.setAttribute('aria-label','Ke slide '+(i+1));d.onclick=()=>go(i,1);dots.appendChild(d)});
+$$('[data-g]').forEach(b=>b.onclick=()=>go(+b.dataset.g,1));
+function go(n,u){if(n<0||n>=sl.length)return;if(u)auto=false;cur=n;introSwitch(n);
+sl.forEach((s,i)=>s.classList.toggle('on',i===n));
+sl.forEach((s,i)=>s.querySelectorAll('iframe[data-src]').forEach(f=>{if(i===n){if(!f.getAttribute('src'))f.src=f.dataset.src}else f.removeAttribute('src')}));
+[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===n));
+$('#prog').style.width=(n/(sl.length-1)*100)+'%';
+$('#ct').textContent=(n+1)+' / '+sl.length;
+$('#hd').style.opacity=n?1:0;st.style.setProperty('--hb',sl[n].classList.contains('lt')?'#f1f2f4':'#0b0b0c');{const sc=sl[n].querySelector('.sc');if(sc)sc.scrollTop=0}$('#hs').innerHTML='<b>BMW</b>'+sl[n].dataset.t;
+$('#hd').style.color=sl[n].classList.contains('lt')?'#000':'#fff';$('#ct').style.color=sl[n].classList.contains('lt')?'#222':'#fff';
+sl[n].querySelectorAll('[data-n]').forEach(c=>{const t=+c.dataset.n;let s0=null;const f=x=>{s0=s0||x;const p=Math.min((x-s0)/1500,1),v=Math.round(t*(1-Math.pow(1-p,3)));c.textContent=v.toLocaleString('id-ID');if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)})}
+$('#nx').onclick=()=>go(cur+1,1);$('#pv').onclick=()=>go(cur-1,1);
+addEventListener('keydown',e=>{if(cur===0&&!unlocked&&(e.key==='Enter'||e.key===' ')){e.preventDefault();startIntro();return}if(e.target.closest&&e.target.closest('input,textarea'))return;if(e.key==='ArrowRight')go(cur+1,1);if(e.key==='ArrowLeft')go(cur-1,1);});
+let t0=null;st.addEventListener('touchstart',e=>t0=[e.touches[0].clientX,e.touches[0].clientY],{passive:true});
+st.addEventListener('touchend',e=>{if(!t0)return;const c=e.changedTouches[0],dx=c.clientX-t0[0],dy=c.clientY-t0[1];if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4)go(cur+(dx<0?1:-1),1);t0=null});
+function fit(){const W=innerWidth,H=innerHeight,por=H>W;document.body.classList.toggle('por',por);
+if(por){st.style.width=W+'px';st.style.height=H+'px';st.style.setProperty('--fs',Math.min(W/42,12)+'px')}
+else{const w=Math.min(W,H*16/9);st.style.width=w+'px';st.style.height='';st.style.setProperty('--fs',w/100+'px')}}
+function tf(){const d=document,e=d.documentElement;try{if(!(d.fullscreenElement||d.webkitFullscreenElement)){(e.requestFullscreen||e.webkitRequestFullscreen).call(e)}else{(d.exitFullscreen||d.webkitExitFullscreen).call(d)}}catch(x){}}
+$('#fsb').onclick=tf;
+addEventListener('resize',fit);addEventListener('orientationchange',()=>setTimeout(fit,250));fit();
+// ---- intro + soundtrack (disintesis dengan Web Audio, tanpa file audio)
+const intro=$('#intro');let AC=null,master=null,bus=null,IR=null,unlocked=false,muted=false,firstRun=true,introT=null;
+function audioInit(){if(AC)return;const C=window.AudioContext||window.webkitAudioContext;if(!C)return;AC=new C();master=AC.createGain();master.gain.value=muted?0:.85;const cp=AC.createDynamicsCompressor();master.connect(cp);cp.connect(AC.destination);const L=Math.floor(AC.sampleRate*3.2);IR=AC.createBuffer(2,L,AC.sampleRate);for(let c=0;c<2;c++){const d=IR.getChannelData(c);for(let i=0;i<L;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/L,2.6)}}
+function stopSfx(){if(bus&&AC){const b=bus;bus=null;b.gain.cancelScheduledValues(AC.currentTime);b.gain.setValueAtTime(b.gain.value,AC.currentTime);b.gain.linearRampToValueAtTime(0,AC.currentTime+.5);setTimeout(()=>{try{b.disconnect()}catch(e){}},900)}}
+function sfx(){if(!AC)return;if(AC.resume)AC.resume();stopSfx();const t=AC.currentTime+.08,ti=1.55;
+bus=AC.createGain();bus.connect(master);const vc=AC.createConvolver();vc.buffer=IR;const vg=AC.createGain();vg.gain.value=.6;vc.connect(vg);vg.connect(bus);
+const out=(n,w)=>{n.connect(bus);if(w){const k=AC.createGain();k.gain.value=w;n.connect(k);k.connect(vc)}};
+const nb=AC.createBuffer(1,AC.sampleRate*4,AC.sampleRate),nd=nb.getChannelData(0);for(let i=0;i<nd.length;i++)nd[i]=Math.random()*2-1;
+const noise=()=>{const x=AC.createBufferSource();x.buffer=nb;return x};
+{const n=noise(),f=AC.createBiquadFilter(),g=AC.createGain();f.type='bandpass';f.Q.value=1.1;f.frequency.setValueAtTime(220,t);f.frequency.exponentialRampToValueAtTime(6000,t+ti);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.32,t+ti);g.gain.linearRampToValueAtTime(0,t+ti+.06);n.connect(f);f.connect(g);out(g,.5);n.start(t);n.stop(t+ti+.1)}
+{const f=AC.createBiquadFilter(),g=AC.createGain();f.type='lowpass';f.frequency.setValueAtTime(140,t);f.frequency.exponentialRampToValueAtTime(2600,t+ti);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.2,t+ti);g.gain.linearRampToValueAtTime(0,t+ti+.05);[55,55.45,110.3].forEach(fr=>{const o=AC.createOscillator();o.type='sawtooth';o.frequency.setValueAtTime(fr,t);o.frequency.exponentialRampToValueAtTime(fr*2,t+ti);o.connect(f);o.start(t);o.stop(t+ti+.1)});f.connect(g);out(g,.35)}
+{const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.setValueAtTime(120,t+ti);o.frequency.exponentialRampToValueAtTime(36,t+ti+.9);g.gain.setValueAtTime(.0001,t+ti);g.gain.linearRampToValueAtTime(.95,t+ti+.02);g.gain.exponentialRampToValueAtTime(.001,t+ti+3);o.connect(g);out(g,.15);o.start(t+ti);o.stop(t+ti+3.1)}
+{const n=noise(),f=AC.createBiquadFilter(),g=AC.createGain();f.type='lowpass';f.frequency.setValueAtTime(5000,t+ti);f.frequency.exponentialRampToValueAtTime(300,t+ti+.7);g.gain.setValueAtTime(.7,t+ti);g.gain.exponentialRampToValueAtTime(.001,t+ti+1.1);n.connect(f);f.connect(g);out(g,.8);n.start(t+ti);n.stop(t+ti+1.2)}
+{const f=AC.createBiquadFilter();f.type='lowpass';f.frequency.value=3200;[146.83,220,293.66,369.99,440,659.25].forEach((fr,i)=>{[0,1].forEach(d=>{const o=AC.createOscillator(),g=AC.createGain(),pk=(d?.018:.04)*(i<2?1.3:1);o.type=d?'triangle':'sine';o.frequency.value=fr*(d?1.004:1);g.gain.setValueAtTime(.0001,t+ti);g.gain.linearRampToValueAtTime(pk,t+ti+.9);g.gain.setValueAtTime(pk,t+ti+4.6);g.gain.exponentialRampToValueAtTime(.0001,t+ti+7.2);o.connect(g);g.connect(f);o.start(t+ti);o.stop(t+ti+7.3)})});out(f,.9)}
+[880,1174.66,1479.98,1760,2349.32].forEach((fr,i)=>{const o=AC.createOscillator(),g=AC.createGain(),q=t+ti+.25+i*.17;o.type='sine';o.frequency.value=fr;g.gain.setValueAtTime(.0001,q);g.gain.linearRampToValueAtTime(.06,q+.01);g.gain.exponentialRampToValueAtTime(.0001,q+2.2);o.connect(g);out(g,1.2);o.start(q);o.stop(q+2.3)})}
+function playIntro(){intro.classList.add('started');intro.classList.remove('go');void intro.offsetWidth;intro.classList.add('go');sfx()}
+function startIntro(){if(unlocked&&intro.classList.contains('go'))return;unlocked=true;audioInit();playIntro();try{if(!(document.fullscreenElement||document.webkitFullscreenElement))tf()}catch(x){}clearTimeout(introT);if(firstRun){firstRun=false;introT=setTimeout(()=>{if(auto&&cur===0)go(1)},9500)}}
+function introSwitch(n){if(n===0){if(unlocked)playIntro();else intro.classList.remove('started','go')}else{stopSfx();clearTimeout(introT);setTimeout(()=>{if(cur!==0)intro.classList.remove('go')},900)}}
+$('#gate').onclick=startIntro;
+$('#snd').onclick=()=>{muted=!muted;$('#snd').classList.toggle('off',muted);if(master)master.gain.value=muted?0:.85};
+// intro dots
+(()=>{let g='';for(let k=0;k<6;k++){const n=[16,28,40,56,72,96][k],r=[21,28,36,44,52,60][k];for(let i=0;i<n;i++){const a=i/n*6.283+k*.4;g+='<circle cx="'+(Math.cos(a)*r*1.2).toFixed(1)+'" cy="'+(Math.sin(a)*r*1.2).toFixed(1)+'" r="'+(.9-k*.08).toFixed(2)+'" style="--d:'+(k*.15+i*.01).toFixed(2)+'s"/>'}}$('#ds').innerHTML=g})();
+// logo meaning
+const D={
+ring:['Cincin hitam','<p><em>Makna.</em> Lingkaran tanpa putus melambangkan kesatuan, kesinambungan, dan gerak, seperti roda yang terus berputar. Hitam berarti kekuatan, keanggunan, dan kemewahan.</p><p><em>Asal-usul.</em> Cincin hitam diwarisi dari logo Rapp Motorenwerke, perusahaan pendahulu BMW.</p>'],
+letters:['Huruf BMW','<p><em>Makna.</em> Huruf di bagian atas cincin menegaskan nama merek langsung pada simbolnya, sehingga logo dan nama tak terpisahkan.</p><p><em>Asal-usul.</em> Logo dengan huruf BMW terdaftar pada 5 Oktober 1917 sebagai tanda dagang resmi perusahaan.</p>'],
+cross:['Garis silang','<p><em>Makna.</em> Dua garis lurus membagi lingkaran menjadi empat bidang sama besar: simbol presisi, keseimbangan, dan keteraturan rekayasa.</p><p><em>Catatan.</em> Anggapan bahwa ini baling-baling pesawat berasal dari iklan BMW tahun 1929. BMW menjelaskan logonya tidak berasal dari baling-baling.</p>'],
+blue:['Warna biru','<p><em>Makna.</em> Biru melambangkan langit, teknologi, inovasi, dan kepercayaan.</p><p><em>Asal-usul.</em> Biru dan putih adalah warna Negara Bagian Bavaria, daerah asal perusahaan.</p>'],
+white:['Warna putih','<p><em>Makna.</em> Putih melambangkan kemurnian, kebersihan, dan kesempurnaan; bersama biru memberi kesan jernih dan modern.</p><p><em>Asal-usul.</em> Urutan warna dibalik dari bendera Bavaria karena aturan merek dagang saat itu melarang memakai lambang negara.</p>']};
+const inf=$('#inf'),tbs=$$('#tb button');
+function sh(k){inf.style.opacity=0;setTimeout(()=>{inf.innerHTML='<h3>'+D[k][0]+'</h3>'+D[k][1];inf.style.opacity=1},150);tbs.forEach(b=>b.classList.toggle('on',b.dataset.k===k));$$('#lgs [data-k]').forEach(e=>e.classList.toggle('on',e.dataset.k===k))}
+tbs.forEach(b=>b.onclick=()=>sh(b.dataset.k));$$('#lgs [data-k]').forEach(e=>e.onclick=e.onmouseenter=()=>sh(e.dataset.k));sh('ring');
+go(0);
+</script>
+</body>
+</html>
